@@ -1,0 +1,25 @@
+{% extends 'project/base.html' %}
+
+{% block header %}
+<header id="header" class="shadow-sm">
+    {% include 'project/includes/_navbar.html' %}
+
+    {% block toolbar %}{% endblock %}
+
+    <nav aria-label="breadcrumb">
+        {% block breadcrumb %}{% endblock %}
+    </nav>
+
+</header>
+{% endblock %}
+
+{% block container %}
+<div class="container-fluid mt-4">
+    {% block heading %}{% endblock %}
+    {% block content %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include 'project/includes/_footer.html' %}
+{% endblock %}

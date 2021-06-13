@@ -1,0 +1,17 @@
+{% load i18n %}
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <h4 class="mb-4">{% trans "Are you sure?" %}</h4>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="d-flex justify-content-end flex-wrap flex-md-nowrap align-items-center">
+                <a  href="#" id="cancel-btn" class="btn btn-secondary mr-3">{% trans "Cancel" %}</a>
+                <button type="submit" class="btn btn-danger">{% trans "Delete" %}</button>
+            </div>
+
+        </form>
+    </div>
+</div>

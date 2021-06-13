@@ -1,0 +1,159 @@
+@import url(fonts.css); /* Remove this in production */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+    /*color: #495057 !important;*/
+    font-family: 'Roboto', sans-serif !important;
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.bg-image {
+    background-image: url('../imgs/login_bg_1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.toggle {
+    font-size: 1.5rem;
+}
+
+/* Table */
+.icon-sm {
+    width: .5rem;
+}
+
+.icon-md {
+    width: 1rem;
+}
+
+.icon-lg {
+    width: 1.5rem;
+}
+
+.delete-btn {
+    text-align: center!important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.orderable a{
+    color: #343a40
+}
+
+table thead th.orderable > a {
+    padding-right: 20px;
+    background: url(../imgs/arrow-inactive-up.png) right center no-repeat;
+}
+table thead th.orderable.asc > a {
+    background-image: url(../imgs/arrow-active-up.png);
+}
+table thead th.orderable.desc > a {
+    background-image: url(../imgs/arrow-active-down.png);
+}
+
+/*Navbar */
+/*.navbar-nav .nav-link {
+    font-size: 16px
+}*/
+
+.nav-tabs .nav-link {
+    color: #495057;
+}
+
+/*Navbar*/
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #007bff;
+}
+
+/*Tab*/
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > li > a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:0px;
+    border-bottom-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0,123,255,.5);
+    color: #007bff !important;
+    background-color: transparent !important;
+}
+.nav-pills .nav-link {
+    font-weight: bold;
+    border-radius:0px;
+    color: #6c757d;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:0px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #007bff;
+    color: #007bff !important;
+    background-color: transparent !important;
+}
+
+/*a*/
+a:hover {
+    text-decoration: none;
+}
+
+a.link-white {
+    color: rgba(255,255,255,.5);
+}
+a:hover.link-white {
+    color: #ffff;
+}
+
+/* errors */
+.errorlist {
+    color: #bd2130;
+    font-size: .9rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px; /* Set the fixed height of the footer here */
+  line-height: 45px; /* Vertically center the text there */
+  background-color: rgba(255,255,255,.5)!important;
+}
+
+/* Sidebar */
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#patient-tab {
+    overflow: auto;
+}
+
+@media(max-width: 768px){
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}

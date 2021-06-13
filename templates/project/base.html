@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS ***This should be CDN** -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/bootstrap.min.css' %}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/style.css' %}"/>
+
+    <!-- Font-awesome ***This should be CDN*** -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/fontawesome_all.css' %}"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    {% block stylesheets %}{% endblock %}
+
+</head>
+
+<body {% block body_attrs %}{% endblock %}>
+
+{% block header %}{% endblock %}
+
+{% block sub_header %}{% endblock %}
+
+<div id="app">
+    {% block container %}{% endblock %}
+</div>
+
+{% block footer %}{% endblock %}
+
+{% block modal %}{% endblock %}
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- ***These should be CDN*** -->
+<script src="{% static 'project/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'project/js/popper.min.js' %}"></script>
+<script src="{% static 'project/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'project/js/moment.js' %}"></script>
+
+<!-- Custom -->
+<script src="{% static 'project/js/cancel.js' %}"></script>
+
+<!-- These are optional and only needed for vue.js -->
+<script src="{% static 'project/js/axios.js' %}"></script>
+<script src="{% static 'project/js/vue.js' %}"></script>
+
+{% block js_scripts %}{% endblock %}
+
+{% block vue_components %}{% endblock %}
+
+<!-- This is our main vue.js instance, which all components will attach to -->
+<script src="{% static 'project/js/vue/app.js' %}"></script>
+</body>
+</html>

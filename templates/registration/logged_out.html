@@ -1,0 +1,10 @@
+{% extends "project/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<h3 class="mb-4">{{ title }}</h3>
+
+<p>{% trans "Thanks for using our service today." %} <a href="{% url 'patients:home' %}">{% trans 'Log in' %}</a></p>
+
+{% endblock %}
